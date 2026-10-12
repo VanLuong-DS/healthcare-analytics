@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Practical learning resources for healthcare analytics, statistics, data tools, and real-world healthcare use cases.">
+  <title>Van Luong | Healthcare Analytics</title>
+  <style>
+    :root {
+      --navy: #163b5c;
+      --blue: #2d6ea5;
+      --ink: #172b3a;
+      --muted: #5c6d7a;
+      --paper: #f5f8fb;
+      --line: #dce5ec;
+      --white: #ffffff;
+      --green: #267653;
+      --gold: #9a671e;
+      --purple: #7350a5;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.6;
+    }
+    a { color: var(--blue); }
+    .container { width: min(1100px, calc(100% - 40px)); margin: 0 auto; }
+    header {
+      background: var(--white);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .nav-wrap {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand { color: var(--navy); text-decoration: none; font-weight: 800; line-height: 1.2; }
+    .brand small { display: block; color: var(--muted); font-size: .75rem; font-weight: 600; letter-spacing: .08em; margin-top: 5px; }
+    nav { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+    nav a { text-decoration: none; font-size: .88rem; color: var(--ink); font-weight: 650; }
+    nav a:hover { color: var(--blue); }
+    .hero { background: var(--navy); color: var(--white); padding: 76px 0 68px; }
+    .eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: .78rem; font-weight: 800; color: #b9d8ef; }
+    h1 { font-size: clamp(2.3rem, 5vw, 4.2rem); line-height: 1.08; max-width: 780px; margin: 14px 0 22px; letter-spacing: -.04em; }
+    .hero p { color: #e1edf5; max-width: 720px; font-size: 1.12rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .button { display: inline-block; padding: 12px 18px; border-radius: 9px; background: var(--white); color: var(--navy); font-weight: 800; text-decoration: none; }
+    .button.secondary { color: var(--white); border: 1px solid #8aa6bb; background: transparent; }
+    section { padding: 64px 0; }
+    section.alt { background: var(--paper); }
+    .section-kicker { color: var(--blue); text-transform: uppercase; font-weight: 800; font-size: .76rem; letter-spacing: .1em; }
+    h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); line-height: 1.2; letter-spacing: -.025em; margin: 8px 0 12px; }
+    .intro { max-width: 760px; color: var(--muted); margin: 0 0 28px; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .card { background: var(--white); border: 1px solid var(--line); border-radius: 15px; padding: 24px; box-shadow: 0 5px 18px rgba(22,59,92,.035); }
+    .card h3 { margin: 0 0 8px; font-size: 1.18rem; }
+    .card p { color: var(--muted); margin: 0 0 14px; }
+    .card ul { padding-left: 19px; margin: 10px 0 0; }
+    .card li { margin: 5px 0; }
+    .number { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; font-weight: 850; margin-bottom: 15px; background: #e5eff8; color: var(--blue); }
+    .green .number { background: #e2f3e9; color: var(--green); }
+    .gold .number { background: #fbefd9; color: var(--gold); }
+    .purple .number { background: #eee7f8; color: var(--purple); }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .pill { border: 1px solid var(--line); border-radius: 999px; padding: 5px 10px; font-size: .82rem; font-weight: 700; background: #fff; }
+    .feature-band { background: #eaf2f8; border: 1px solid #d5e4ef; border-radius: 16px; padding: 26px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 25px; align-items: center; }
+    .feature-band p { margin-bottom: 0; color: var(--muted); }
+    .contact-box { background: var(--navy); color: var(--white); padding: 30px; border-radius: 16px; }
+    .contact-box p { color: #e1edf5; }
+    .contact-box a { color: #fff; font-weight: 800; }
+    footer { padding: 26px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+    .footer-wrap { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    @media (max-width: 760px) {
+      .nav-wrap { align-items: flex-start; flex-direction: column; padding: 16px 0; gap: 12px; }
+      nav { gap: 10px 14px; }
+      nav a { font-size: .82rem; }
+      .hero { padding: 54px 0; }
+      .grid, .feature-band { grid-template-columns: 1fr; }
+      section { padding: 48px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav-wrap">
+      <a class="brand" href="#home">Van Luong | Healthcare Analytics<small>LEARN · ANALYZE · APPLY</small></a>
+      <nav aria-label="Main navigation">
+        <a href="#math">Math & Statistics</a>
+        <a href="#fundamentals">Analytics Skills</a>
+        <a href="#healthcare">Healthcare</a>
+        <a href="#use-cases">Use Cases</a>
+        <a href="#about">About Me</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="eyebrow">A practical learning resource</div>
+        <h1>Turn Data Into Healthcare Insights.</h1>
+        <p>Learn the fundamentals of analytics, understand the U.S. healthcare industry, and apply your skills to real-world business questions—from spreadsheets and SQL to Python, AI-assisted analysis, and data storytelling.</p>
+        <div class="actions">
+          <a class="button" href="#learning">Explore the learning library</a>
+          <a class="button secondary" href="#about">About Van</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="learning">
+      <div class="container">
+        <div class="section-kicker">Explore the learning library</div>
+        <h2>Build your skills, one step at a time.</h2>
+        <p class="intro">Start with the basics, develop practical tools, learn the healthcare context, and then put everything together through applied use cases. New lessons and examples can be added as the library grows.</p>
+        <div class="grid">
+          <article class="card" id="math">
+            <div class="number">01</div>
+            <h3>Math & Statistics Basics</h3>
+            <p>Learn how to summarize data, understand variation, and interpret results without getting lost in formulas.</p>
+            <ul>
+              <li>Population, sample, observations, and denominators</li>
+              <li>Counts, percentages, proportions, and rates</li>
+              <li>Mean, median, quartiles, and percentiles</li>
+              <li>Distributions, histograms, and outliers</li>
+              <li>Variability, trends, correlation, and basic inference</li>
+            </ul>
+          </article>
+
+          <article class="card green" id="fundamentals">
+            <div class="number">02</div>
+            <h3>Data Analytics Fundamentals</h3>
+            <p>Develop practical skills for getting data, preparing it, analyzing it, and communicating what it means.</p>
+            <div class="pill-row">
+              <span class="pill">Excel</span><span class="pill">SQL</span><span class="pill">Python</span>
+              <span class="pill">LLMs & AI</span><span class="pill">Visualization & Storytelling</span>
+            </div>
+            <ul>
+              <li>Excel formulas, pivot tables, lookups, and data cleaning</li>
+              <li>SQL queries, aggregations, and joins</li>
+              <li>Python and pandas for reading and analyzing files</li>
+              <li>Using LLMs to explore data and validate results</li>
+              <li>Charts, dashboards, and stakeholder communication</li>
+            </ul>
+          </article>
+
+          <article class="card gold" id="healthcare">
+            <div class="number">03</div>
+            <h3>Healthcare Domain Knowledge</h3>
+            <p>Understand the U.S. healthcare ecosystem and the data it produces.</p>
+            <ul>
+              <li>Manufacturers, distributors, pharmacies, providers, payers, and patients</li>
+              <li>Insurers, Medicare, Medicaid, and other key stakeholders</li>
+              <li>Medical claims, pharmacy claims, EHR, and public health data</li>
+              <li>ICD-10-CM, HCPCS, NDC, and NPI basics</li>
+              <li>Public datasets, data quality, and healthcare metrics</li>
+            </ul>
+          </article>
+
+          <article class="card purple" id="use-cases">
+            <div class="number">04</div>
+            <h3>Use Case Inventory</h3>
+            <p>Follow realistic business questions from problem definition through analysis and recommendations.</p>
+            <ul>
+              <li>Prescription volume and pharmaceutical distribution</li>
+              <li>Healthcare utilization and claims cost analysis</li>
+              <li>Patient populations and service patterns</li>
+              <li>AI-assisted exploratory data analysis</li>
+              <li>End-to-end projects with charts and presentations</li>
+            </ul>
+            <p><em>Step-by-step case studies and sample datasets will be added here.</em></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt" id="about">
+      <div class="container">
+        <div class="section-kicker">About me</div>
+        <h2>Connecting data, analytics, AI, and healthcare.</h2>
+        <div class="feature-band">
+          <div>
+            <p>I am a data professional with more than 10 years of experience in data analytics and data science, including experience in pharmaceutical distribution and the pharmaceutical industry. I have also been exploring practical applications of AI and large language models in analytical work.</p>
+            <p>This website is a place to share practical knowledge, help others build analytical skills, and connect technical learning with real-world healthcare problems.</p>
+          </div>
+          <div>
+            <h3>Ways we might work together</h3>
+            <ul>
+              <li>Project-based analytics consulting</li>
+              <li>Coaching and mentoring</li>
+              <li>Analytics skills and career development</li>
+              <li>Healthcare data and AI problem-solving</li>
+            </ul>
+          </div>
+        </div>
+        <div style="height:22px"></div>
+        <div class="contact-box">
+          <h2>Let's connect.</h2>
+          <p>Have a healthcare analytics question, a project to discuss, or an interest in coaching and professional development? I'd welcome a conversation.</p>
+          <a href="mailto:van.h.luong@outlook.com">van.h.luong@outlook.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-wrap">
+      <span>© <span id="year">2026</span> Van Luong | Healthcare Analytics</span>
+      <span>Educational content · Practical examples · Continuous learning</span>
+    </div>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
