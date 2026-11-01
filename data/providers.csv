@@ -1,0 +1,201 @@
+provider_id,specialty,region
+PR001,Internal Medicine,Northeast
+PR002,Rheumatology,Northeast
+PR003,Rheumatology,Northeast
+PR004,Rheumatology,Northeast
+PR005,Primary Care,Midwest
+PR006,Rheumatology,Northeast
+PR007,Cardiology,Midwest
+PR008,Rheumatology,Northeast
+PR009,Cardiology,West
+PR010,Internal Medicine,West
+PR011,Primary Care,West
+PR012,Pulmonology,South
+PR013,Pulmonology,West
+PR014,Rheumatology,Midwest
+PR015,Pulmonology,Midwest
+PR016,Cardiology,Northeast
+PR017,Rheumatology,South
+PR018,Primary Care,Northeast
+PR019,Primary Care,West
+PR020,Rheumatology,Northeast
+PR021,Cardiology,South
+PR022,Cardiology,South
+PR023,Internal Medicine,South
+PR024,Pulmonology,South
+PR025,Pulmonology,Midwest
+PR026,Pulmonology,Northeast
+PR027,Pulmonology,Northeast
+PR028,Rheumatology,West
+PR029,Rheumatology,Northeast
+PR030,Cardiology,Northeast
+PR031,Cardiology,Northeast
+PR032,Pulmonology,West
+PR033,Cardiology,Midwest
+PR034,Pulmonology,South
+PR035,Primary Care,Midwest
+PR036,Rheumatology,Northeast
+PR037,Pulmonology,Midwest
+PR038,Internal Medicine,West
+PR039,Cardiology,Midwest
+PR040,Rheumatology,South
+PR041,Rheumatology,Midwest
+PR042,Cardiology,West
+PR043,Pulmonology,Northeast
+PR044,Cardiology,South
+PR045,Pulmonology,West
+PR046,Cardiology,Midwest
+PR047,Pulmonology,Midwest
+PR048,Internal Medicine,West
+PR049,Internal Medicine,Midwest
+PR050,Cardiology,West
+PR051,Rheumatology,Northeast
+PR052,Pulmonology,Northeast
+PR053,Cardiology,South
+PR054,Rheumatology,South
+PR055,Cardiology,Northeast
+PR056,Primary Care,Northeast
+PR057,Rheumatology,Northeast
+PR058,Rheumatology,West
+PR059,Rheumatology,South
+PR060,Primary Care,Midwest
+PR061,Rheumatology,West
+PR062,Pulmonology,Midwest
+PR063,Internal Medicine,South
+PR064,Rheumatology,Midwest
+PR065,Pulmonology,West
+PR066,Rheumatology,Northeast
+PR067,Internal Medicine,Midwest
+PR068,Rheumatology,Northeast
+PR069,Pulmonology,South
+PR070,Rheumatology,South
+PR071,Internal Medicine,South
+PR072,Pulmonology,South
+PR073,Internal Medicine,Midwest
+PR074,Primary Care,South
+PR075,Internal Medicine,South
+PR076,Primary Care,Midwest
+PR077,Cardiology,South
+PR078,Primary Care,South
+PR079,Rheumatology,Midwest
+PR080,Internal Medicine,West
+PR081,Internal Medicine,Northeast
+PR082,Primary Care,Midwest
+PR083,Primary Care,Midwest
+PR084,Cardiology,South
+PR085,Internal Medicine,West
+PR086,Cardiology,Northeast
+PR087,Rheumatology,Midwest
+PR088,Internal Medicine,South
+PR089,Rheumatology,West
+PR090,Cardiology,Midwest
+PR091,Internal Medicine,West
+PR092,Rheumatology,Northeast
+PR093,Rheumatology,South
+PR094,Internal Medicine,South
+PR095,Pulmonology,Northeast
+PR096,Rheumatology,Midwest
+PR097,Pulmonology,South
+PR098,Pulmonology,South
+PR099,Cardiology,Northeast
+PR100,Pulmonology,West
+PR101,Cardiology,Northeast
+PR102,Internal Medicine,West
+PR103,Internal Medicine,South
+PR104,Rheumatology,South
+PR105,Internal Medicine,Northeast
+PR106,Pulmonology,Northeast
+PR107,Pulmonology,South
+PR108,Pulmonology,Northeast
+PR109,Rheumatology,South
+PR110,Primary Care,South
+PR111,Cardiology,South
+PR112,Rheumatology,West
+PR113,Rheumatology,Northeast
+PR114,Cardiology,Northeast
+PR115,Pulmonology,West
+PR116,Rheumatology,West
+PR117,Internal Medicine,South
+PR118,Pulmonology,West
+PR119,Rheumatology,South
+PR120,Rheumatology,South
+PR121,Rheumatology,Midwest
+PR122,Pulmonology,Midwest
+PR123,Internal Medicine,Northeast
+PR124,Pulmonology,West
+PR125,Internal Medicine,South
+PR126,Primary Care,Northeast
+PR127,Pulmonology,West
+PR128,Pulmonology,Northeast
+PR129,Pulmonology,West
+PR130,Rheumatology,Northeast
+PR131,Rheumatology,Northeast
+PR132,Primary Care,West
+PR133,Pulmonology,Northeast
+PR134,Internal Medicine,West
+PR135,Cardiology,Northeast
+PR136,Rheumatology,West
+PR137,Pulmonology,West
+PR138,Internal Medicine,Midwest
+PR139,Rheumatology,Northeast
+PR140,Internal Medicine,South
+PR141,Cardiology,West
+PR142,Pulmonology,Northeast
+PR143,Cardiology,West
+PR144,Cardiology,South
+PR145,Primary Care,Northeast
+PR146,Rheumatology,Northeast
+PR147,Rheumatology,Northeast
+PR148,Internal Medicine,South
+PR149,Cardiology,West
+PR150,Cardiology,Northeast
+PR151,Pulmonology,West
+PR152,Rheumatology,Midwest
+PR153,Cardiology,West
+PR154,Rheumatology,Midwest
+PR155,Rheumatology,Midwest
+PR156,Internal Medicine,South
+PR157,Internal Medicine,West
+PR158,Pulmonology,Midwest
+PR159,Rheumatology,West
+PR160,Cardiology,Midwest
+PR161,Rheumatology,Midwest
+PR162,Internal Medicine,South
+PR163,Primary Care,South
+PR164,Internal Medicine,South
+PR165,Primary Care,South
+PR166,Rheumatology,West
+PR167,Cardiology,Northeast
+PR168,Pulmonology,West
+PR169,Primary Care,Northeast
+PR170,Pulmonology,West
+PR171,Rheumatology,West
+PR172,Primary Care,Northeast
+PR173,Cardiology,South
+PR174,Cardiology,Northeast
+PR175,Rheumatology,Northeast
+PR176,Internal Medicine,West
+PR177,Rheumatology,Midwest
+PR178,Rheumatology,Northeast
+PR179,Pulmonology,West
+PR180,Internal Medicine,Northeast
+PR181,Pulmonology,Midwest
+PR182,Pulmonology,Northeast
+PR183,Rheumatology,South
+PR184,Rheumatology,South
+PR185,Primary Care,Midwest
+PR186,Pulmonology,Northeast
+PR187,Pulmonology,Northeast
+PR188,Cardiology,West
+PR189,Cardiology,West
+PR190,Internal Medicine,South
+PR191,Rheumatology,Northeast
+PR192,Primary Care,Northeast
+PR193,Rheumatology,Midwest
+PR194,Rheumatology,Midwest
+PR195,Cardiology,Midwest
+PR196,Pulmonology,South
+PR197,Internal Medicine,West
+PR198,Rheumatology,Northeast
+PR199,Cardiology,South
+PR200,Internal Medicine,Northeast
