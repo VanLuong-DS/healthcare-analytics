@@ -18,4 +18,27 @@ $('exercise').innerHTML=exercises.map((e,i)=>`<option value="${i}">${e.title}</o
 $('hint').onclick=()=>{$('status').textContent=exercises[+$('exercise').value].hint};$('solution').onclick=()=>{$('editor').value=exercises[+$('exercise').value].solution;$('status').textContent='Sample solution loaded. Click Run query.'};$('reset').onclick=selectExercise;
 $('run').onclick=()=>{try{let result=execute($('editor').value);render(result.values,result.columns);$('status').textContent=`Query completed. ${result.values.length} row(s) returned.`}catch(e){$('status').textContent='SQL error: '+e.message}};
 $('check').onclick=()=>{try{const actual=execute($('editor').value),expected=execute(exercises[+$('exercise').value].solution);const norm=r=>JSON.stringify(r.values.map(row=>row.map(v=>typeof v==='number'?Number(v.toFixed(5)):v)));$('status').textContent=actual.columns.length===expected.columns.length&&norm(actual)===norm(expected)?'✓ Your result matches the sample answer. Well done!':'Not quite the same result yet. Check columns, filters, sorting and row counts. More than one query can be correct.'}catch(e){$('status').textContent='Check error: '+e.message}};
-(async()=>{try{if(typeof initSqlJs!=='function')throw Error('SQL engine script could not load. Check your internet connection.');const SQL=await initSqlJs({locateFile:f=>'https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.13.0/'+f});db=new SQL.Database();let schema=[];for(const name of files){const resp=await fetch('data/'+name+'.csv');if(!resp.ok)throw Error('Could not fetch '+name+'.csv');const rows=parseCSV(await resp.text());const columns=rows.shift();const numeric=new Set(['birth_year','allowed_amount','days_supply']);const names=columns.map(c=>'"'+c+'" '+(numeric.has(c)?'REAL':'TEXT')).join(',');db.run('CREATE TABLE "'+name+'" ('+names+')');const stmt=db.prepare('INSERT INTO "'+name+'" VALUES ('+columns.map(()=>'?').join(',')+')');db.run('BEGIN');for(const row of rows)stmt.run(row.map((v,i)=>numeric.has(columns[i])?(v===''?null:Number(v)):(v===''?null:v)));stmt.free();db.run('COMMIT');schema.push('<p><strong>'+name+'</strong> ('+rows.length+' rows): '+columns.join(', ')+'</p>')} $('schema').innerHTML=schema.join('');$('run').disabled=false;$('check').disabled=false;selectExercise()}catch(e){$('status').textContent='Could not load the practice lab: '+e.message+' Run through GitHub Pages or a local web server, and check your internet connection.'}})();
+const statusEl=$('status');
+function timeout(promise,ms,label){return Promise.race([promise,new Promise((_,reject)=>setTimeout(()=>reject(new Error(label+' timed out after '+Math.round(ms/1000)+' seconds')),ms))]);}
+async function loadSqlEngine(){
+ const sources=[
+  'https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.13.0/',
+  'https://cdn.jsdelivr.net/npm/sql.js@1.13.0/dist/',
+  'https://unpkg.com/sql.js@1.13.0/dist/'
+ ];
+ const errors=[];
+ for(const base of sources){
+  statusEl.textContent='Loading SQL engine from '+new URL(base).hostname+'…';
+  try{
+   delete window.initSqlJs;
+   await timeout(new Promise((resolve,reject)=>{
+    const s=document.createElement('script');s.src=base+'sql-wasm.js';s.onload=resolve;s.onerror=()=>reject(new Error('Script blocked or unavailable'));document.head.appendChild(s);
+   }),12000,'SQL engine script');
+   if(typeof initSqlJs!=='function')throw Error('SQL engine not initialized');
+   const SQL=await timeout(initSqlJs({locateFile:f=>base+f}),15000,'SQL WebAssembly');
+   return SQL;
+  }catch(err){errors.push(new URL(base).hostname+': '+err.message);}
+ }
+ throw Error('Could not load SQLite. '+errors.join(' | '));
+}
+(async()=>{try{const SQL=await loadSqlEngine();db=new SQL.Database();let schema=[];for(const name of files){statusEl.textContent='Loading '+name+'.csv…';const resp=await timeout(fetch('data/'+name+'.csv'),12000,name+'.csv');if(!resp.ok)throw Error('Could not fetch data/'+name+'.csv (HTTP '+resp.status+'). Check the data folder and filename capitalization.');const rows=parseCSV(await resp.text());const columns=rows.shift();const numeric=new Set(['birth_year','allowed_amount','days_supply']);const names=columns.map(c=>'"'+c+'" '+(numeric.has(c)?'REAL':'TEXT')).join(',');db.run('CREATE TABLE "'+name+'" ('+names+')');const stmt=db.prepare('INSERT INTO "'+name+'" VALUES ('+columns.map(()=>'?').join(',')+')');db.run('BEGIN');for(const row of rows)stmt.run(row.map((v,i)=>numeric.has(columns[i])?(v===''?null:Number(v)):(v===''?null:v)));stmt.free();db.run('COMMIT');schema.push('<p><strong>'+name+'</strong> ('+rows.length+' rows): '+columns.join(', ')+'</p>')} $('schema').innerHTML=schema.join('');$('run').disabled=false;$('check').disabled=false;selectExercise()}catch(e){$('status').textContent='Could not load the practice lab: '+e.message+' Check browser Console (F12) and Network for blocked requests.'}})();
