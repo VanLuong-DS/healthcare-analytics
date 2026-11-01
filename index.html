@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Practical learning resources for healthcare analytics, statistics, data tools, and real-world healthcare use cases.">
-  <title>Van Luong | Healthcare Analytics</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Practical learning resources for healthcare analytics, statistics, data tools, and real-world healthcare use cases." name="description"/>
+<title>Van Luong | Healthcare Analytics</title>
+<style>
     :root {
       --navy: #163b5c;
       --blue: #2d6ea5;
@@ -88,136 +89,132 @@
       section { padding: 48px 0; }
     }
   </style>
-<link rel="stylesheet" href="theme.css"></head>
+<link href="theme.css" rel="stylesheet"/><style>/* Homepage refinements: consistent links, pills, and readable body copy */
+#learning .card p,#learning .card li,#about .feature-band p,#about .feature-band li,#learning .intro {color:#24202a!important;}
+#learning .card a:not(.pill),#about a:not(.button){color:#604779!important;text-decoration:underline;text-underline-offset:2px;}
+#fundamentals .pill-row{gap:10px;align-items:center;}
+#fundamentals .pill-row .pill{display:inline-flex;align-items:center;justify-content:center;padding:7px 13px;border:1px solid #d9c8e9;border-radius:999px;background:#fff;color:#604779!important;text-decoration:underline!important;text-underline-offset:2px;font-weight:700;line-height:1.4;transition:background-color .15s ease,border-color .15s ease;}
+#fundamentals .pill-row .pill:hover,#fundamentals .pill-row .pill:focus-visible{background:#eee5f7;border-color:#9475b4;}
+#about .feature-band p{margin:0 0 14px;}
+#about .feature-band p:last-child{margin-bottom:0;}
+#about .contact-box a{color:#604779!important;text-decoration:underline;text-underline-offset:2px;}
+#about .contact-box span{color:#604779;}
+@media(max-width:600px){#about .contact-box a{display:inline-block;margin:4px 0;}}
+</style></head>
 <body>
-  <header>
-    <div class="container nav-wrap">
-      <a class="brand" href="#home">Van Luong | Healthcare Analytics<small>LEARN · ANALYZE · APPLY</small></a>
-      <nav aria-label="Main navigation">
-        <a href="#math">Math & Statistics</a>
-        <a href="#fundamentals">Analytics Skills</a>
-        <a href="#healthcare">Healthcare</a>
-        <a href="#use-cases">Use Cases</a>
-        <a href="#about">About Me</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero" id="home">
-      <div class="container">
-        <div class="eyebrow">A practical learning resource</div>
-        <h1>Turn Data Into Healthcare Insights.</h1>
-        <p>Learn the fundamentals of analytics, understand the U.S. healthcare industry, and apply your skills to real-world business questions—from spreadsheets and SQL to Python, AI-assisted analysis, and data storytelling.</p>
-        <div class="actions">
-          <a class="button" href="#learning">Explore the learning library</a>
-          <a class="button secondary" href="#about">About Van</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="learning">
-      <div class="container">
-        <div class="section-kicker">Explore the learning library</div>
-        <h2>Build your skills, one step at a time.</h2>
-        <p class="intro">Start with the basics, develop practical tools, learn the healthcare context, and then put everything together through applied use cases. New lessons and examples can be added as the library grows.</p>
-        <div class="grid">
-          <article class="card" id="math">
-            <div class="number">01</div>
-            <h3><a href="statistics.html">Math & Statistics Basics</a></h3>
-            <p>Learn how to summarize data, understand variation, and interpret results without getting lost in formulas.</p>
-            <ul>
-              <li>Population, sample, observations, and denominators</li>
-              <li>Counts, percentages, proportions, and rates</li>
-              <li>Mean, median, quartiles, and percentiles</li>
-              <li>Distributions, histograms, and outliers</li>
-              <li>Variability, trends, correlation, and basic inference</li>
-            </ul>
-          </article>
-
-          <article class="card green" id="fundamentals">
-            <div class="number">02</div>
-            <h3>Data Analytics Fundamentals</h3>
-            <p>Develop practical skills for getting data, preparing it, analyzing it, and communicating what it means.</p>
-            <div class="pill-row">
-              <a class="pill" href="excel.html" style="text-decoration:none;color:inherit">Excel</a><a class="pill" href="sql.html" style="text-decoration:none;color:inherit">SQL</a><a class="pill" href="python.html">Python</a>
-              <a class="pill" href="ai.html">LLMs & AI</a><a class="pill" href="visualization.html">Visualization & Storytelling</a>
-            </div>
-            <ul>
-              <li>Excel formulas, pivot tables, lookups, and data cleaning</li>
-              <li>SQL queries, aggregations, and joins</li>
-              <li>Python and pandas for reading and analyzing files</li>
-              <li>Using LLMs to explore data and validate results</li>
-              <li>Charts, dashboards, and stakeholder communication</li>
-            </ul>
-          </article>
-
-          <article class="card gold" id="healthcare">
-            <div class="number">03</div>
-            <h3><a href="healthcare.html">Healthcare Domain Knowledge</a></h3>
-            <p>Understand the U.S. healthcare ecosystem and the data it produces.</p>
-            <ul>
-              <li>Manufacturers, distributors, pharmacies, providers, payers, and patients</li>
-              <li>Insurers, Medicare, Medicaid, and other key stakeholders</li>
-              <li>Medical claims, pharmacy claims, EHR, and public health data</li>
-              <li>ICD-10-CM, HCPCS, NDC, and NPI basics</li>
-              <li>Public datasets, data quality, and healthcare metrics</li>
-            </ul>
-          </article>
-
-          <article class="card purple" id="use-cases">
-            <div class="number">04</div>
-            <h3><a href="use-cases.html">Use Case Inventory</a></h3>
-            <p>Follow realistic business questions from problem definition through analysis and recommendations.</p>
-            <ul>
-              <li>Prescription volume and pharmaceutical distribution</li>
-              <li>Healthcare utilization and claims cost analysis</li>
-              <li>Patient populations and service patterns</li>
-              <li>AI-assisted exploratory data analysis</li>
-              <li>End-to-end projects with charts and presentations</li>
-            </ul>
-            <p><a href="use-cases.html">Explore the use cases and exercises →</a></p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="alt" id="about">
-      <div class="container">
-        <div class="section-kicker">About me</div>
-        <h2>Connecting data, analytics, AI, and healthcare.</h2>
-        <div class="feature-band">
-          <div>
-            <p>I am a data professional with more than 10 years of experience in data analytics and data science, including experience in pharmaceutical distribution and the pharmaceutical industry. I have also been exploring practical applications of AI and large language models in analytical work.</p>
-            <p>This website is a place to share practical knowledge, help others build analytical skills, and connect technical learning with real-world healthcare problems.</p>
-          </div>
-          <div>
-            <h3>Ways we might work together</h3>
-            <ul>
-              <li>Project-based analytics consulting</li>
-              <li>Coaching and mentoring</li>
-              <li>Analytics skills and career development</li>
-              <li>Healthcare data and AI problem-solving</li>
-            </ul>
-          </div>
-        </div>
-        <div style="height:22px"></div>
-        <div class="contact-box">
-          <h2>Let's connect.</h2>
-          <p>I enjoy connecting with people who are interested in healthcare, data analytics, and technology. Whether you’re learning something new, sharing ideas, or exploring a topic together, I’d be happy to connect and exchange knowledge.</p>
-          <a href="mailto:van.h.luong@outlook.com">van.h.luong@outlook.com</a>
-        </div>
-      </div>
-    </section>
-  <section class="alt"><div class="container"><h2>Practice with sample healthcare data</h2><p>Download five connected, fictional healthcare tables and practice with the same data as you learn.</p><a class="practice-link" href="practice.html">Explore interactive exercises →</a></div></section></main>
-
-  <footer>
-    <div class="container footer-wrap">
-      <span>© <span id="year">2026</span> Van Luong | Healthcare Analytics</span>
-      <span>Educational content · Practical examples · Continuous learning</span>
-    </div>
-  </footer>
-  <script>
+<header>
+<div class="container nav-wrap">
+<a class="brand" href="#home">Van Luong | Healthcare Analytics<small>LEARN · ANALYZE · APPLY</small></a>
+<nav aria-label="Main navigation">
+<a href="#math">Math &amp; Statistics</a>
+<a href="#fundamentals">Analytics Skills</a>
+<a href="#healthcare">Healthcare</a>
+<a href="#use-cases">Use Cases</a>
+<a href="#about">About Me</a>
+</nav>
+</div>
+</header>
+<main>
+<section class="hero" id="home">
+<div class="container">
+<div class="eyebrow">A practical learning resource</div>
+<h1>Turn Data Into Healthcare Insights.</h1>
+<p>Learn the fundamentals of analytics, understand the U.S. healthcare industry, and apply your skills to real-world business questions—from spreadsheets and SQL to Python, AI-assisted analysis, and data storytelling.</p>
+<div class="actions">
+<a class="button" href="#learning">Explore the learning library</a>
+<a class="button secondary" href="#about">About Van</a>
+</div>
+</div>
+</section>
+<section id="learning">
+<div class="container">
+<div class="section-kicker">Explore the learning library</div>
+<h2>Build your skills, one step at a time.</h2>
+<p class="intro">Start with the basics, develop practical tools, learn the healthcare context, and then put everything together through applied use cases. New lessons and examples can be added as the library grows.</p>
+<div class="grid">
+<article class="card" id="math">
+<div class="number">01</div>
+<h3><a href="statistics.html">Math &amp; Statistics Basics</a></h3>
+<p>Learn how to summarize data, understand variation, and interpret results without getting lost in formulas.</p>
+<ul>
+<li>Population, sample, observations, and denominators</li>
+<li>Counts, percentages, proportions, and rates</li>
+<li>Mean, median, quartiles, and percentiles</li>
+<li>Distributions, histograms, and outliers</li>
+<li>Variability, trends, correlation, and basic inference</li>
+</ul>
+</article>
+<article class="card green" id="fundamentals">
+<div class="number">02</div>
+<h3>Data Analytics Fundamentals</h3>
+<p>Develop practical skills for getting data, preparing it, analyzing it, and communicating what it means.</p>
+<div class="pill-row">
+<a class="pill" href="excel.html">Excel</a><a class="pill" href="sql.html">SQL</a><a class="pill" href="python.html">Python</a>
+<a class="pill" href="ai.html">LLMs &amp; AI</a><a class="pill" href="visualization.html">Visualization &amp; Storytelling</a>
+</div>
+<ul>
+<li>Excel formulas, pivot tables, lookups, and data cleaning</li>
+<li>SQL queries, aggregations, and joins</li>
+<li>Python and pandas for reading and analyzing files</li>
+<li>Using LLMs to explore data and validate results</li>
+<li>Charts, dashboards, and stakeholder communication</li>
+</ul>
+</article>
+<article class="card gold" id="healthcare">
+<div class="number">03</div>
+<h3><a href="healthcare.html">Healthcare Domain Knowledge</a></h3>
+<p>Understand the U.S. healthcare ecosystem and the data it produces.</p>
+<ul>
+<li>Manufacturers, distributors, pharmacies, providers, payers, and patients</li>
+<li>Insurers, Medicare, Medicaid, and other key stakeholders</li>
+<li>Medical claims, pharmacy claims, EHR, and public health data</li>
+<li>ICD-10-CM, HCPCS, NDC, and NPI basics</li>
+<li>Public datasets, data quality, and healthcare metrics</li>
+</ul>
+</article>
+<article class="card purple" id="use-cases">
+<div class="number">04</div>
+<h3><a href="use-cases.html">Use Case Inventory</a></h3>
+<p>Follow realistic business questions from problem definition through analysis and recommendations.</p>
+<ul>
+<li>Prescription volume and pharmaceutical distribution</li>
+<li>Healthcare utilization and claims cost analysis</li>
+<li>Patient populations and service patterns</li>
+<li>AI-assisted exploratory data analysis</li>
+<li>End-to-end projects with charts and presentations</li>
+</ul>
+<p><a href="use-cases.html">Explore the use cases and exercises →</a></p>
+</article>
+</div>
+</div>
+</section>
+<section class="alt" id="about">
+<div class="container">
+<div class="section-kicker">About me</div>
+<h2>Connecting data, analytics, AI, and healthcare.</h2>
+<div class="feature-band">
+<div><p>I'm a data professional and AI enthusiast who uses AI regularly in my analytics work. I've spent close to a decade working in healthcare and the pharmaceutical industry, and I enjoy finding practical ways to use data and technology to solve problems.</p><p>What motivates me is the opportunity to contribute to better healthcare outcomes, more efficient operations, and ultimately better patient care. I started this website to share what I've learned, exchange ideas with people who have similar interests, and offer a starting point for anyone curious about healthcare analytics.</p><p>This is a place for practical knowledge, new ideas, and examples that connect analytics skills with real healthcare questions.</p></div>
+<div>
+<h3>Ways we might work together</h3>
+<ul><li>Project-based analytics consulting and exchanging ideas</li><li>Coaching and mentoring</li><li>Analytics skills, technology updates, and practical uses of AI</li><li>Healthcare data and real-world use cases</li></ul>
+</div>
+</div>
+<div style="height:22px"></div>
+<div class="contact-box">
+<h2>Let's connect.</h2>
+<p>I enjoy connecting with people who are interested in healthcare, data analytics, and technology. Whether you’re learning something new, sharing ideas, or exploring a topic together, I’d be happy to connect and exchange knowledge.</p>
+<a href="mailto:van.h.luong@outlook.com" title="Compose an email to Van Luong in your default email app">van.h.luong@outlook.com</a><span>  ·  </span><a href="https://www.linkedin.com/in/van-luong-4797a170/" rel="noopener noreferrer" target="_blank">Connect on LinkedIn</a>
+</div>
+</div>
+</section>
+<section class="alt"><div class="container"><h2>Practice with sample healthcare data</h2><p>Download five connected, fictional healthcare tables and practice with the same data as you learn.</p><a class="practice-link" href="practice.html">Explore interactive exercises →</a></div></section></main>
+<footer>
+<div class="container footer-wrap">
+<span>© <span id="year">2026</span> Van Luong | Healthcare Analytics</span>
+<span>Educational content · Practical examples · Continuous learning</span>
+</div>
+</footer>
+<script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
