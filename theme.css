@@ -4,3 +4,19 @@ body{font-family:Arial,Helvetica,sans-serif!important;background:#fff!important;
 
 /* Shared learning pages */
 .lesson-wrap{max-width:1050px;margin:auto;padding:44px 22px 75px}.lesson-hero{background:#f3ecfa;padding:50px 22px;border-bottom:1px solid #e4d9ed}.lesson-hero .inner{max-width:1050px;margin:auto}.lesson-hero h1{font-size:clamp(2.1rem,4vw,3.2rem);margin:8px 0 12px}.lesson-hero p{max-width:780px;color:#62596e}.lesson-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}.lesson-card{border:1px solid #e4d9ed;border-radius:14px;padding:23px;background:white;margin:0 0 20px}.lesson-card h2{font-size:1.45rem;margin-top:0}.lesson-card h3{margin-bottom:7px}.lesson-card p,.lesson-card li{line-height:1.65}.lesson-card pre,.code-panel{background:#292238;color:#f3eefa;padding:17px;border-radius:10px;overflow:auto;white-space:pre-wrap;font-size:.92rem}.lesson-card code{font-family:Consolas,monospace}.lesson-card a,.lesson-wrap a{color:#73549b}.lesson-actions{display:flex;gap:12px;flex-wrap:wrap;margin:25px 0}.lesson-actions a,.lab-button{background:#73549b;color:white!important;padding:11px 16px;border:0;border-radius:9px;text-decoration:none;cursor:pointer;font-weight:bold}.lesson-actions a.secondary,.lab-button.secondary{background:#eee6f6;color:#4e3766!important}.lab-button:disabled{opacity:.5;cursor:not-allowed}.lab-select,.lab-input{border:1px solid #c8b7d7;padding:10px;border-radius:8px;font:inherit;max-width:100%;width:100%;background:white}.lab-editor{width:100%;min-height:155px;background:#292238;color:#f5f1fa;border:1px solid #68547b;border-radius:10px;padding:16px;font:14px/1.55 Consolas,monospace;resize:vertical}.lab-status{padding:12px 15px;border-radius:9px;background:#f3eef8;margin:12px 0;white-space:pre-wrap}.lab-scroll{overflow:auto;max-height:400px}.lab-table{border-collapse:collapse;width:100%;font-size:.88rem}.lab-table th,.lab-table td{border:1px solid #e2d9ea;padding:8px;text-align:left;white-space:nowrap}.lab-table th{position:sticky;top:0;background:#eee5f6}.small-note{color:#62596e;font-size:.9rem}.nav-lesson{display:flex;gap:13px;flex-wrap:wrap}.nav-lesson a{color:#604779;text-decoration:none;font-size:.88rem}.nav-lesson a:hover{text-decoration:underline}@media(max-width:600px){.lesson-wrap{padding:28px 15px}.lesson-hero{padding:35px 15px}}
+
+
+/* Accessibility/readability patch: dark text on light lavender surfaces throughout. */
+:root{--ink:#25202b;--muted:#393240}
+body,main,section,.card,.lesson-card,.feature-band,.contact-box,footer{color:#25202b!important}
+p,li,dd,dt,small,.small-note,.intro,.card p,.feature-band p,.contact-box p,.lesson-hero p,.lesson-card p,.lesson-card li,.lab-status{color:#29232f!important}
+a:not(.button):not(.lab-button):not(.practice-link):not(.pill){color:#604779;text-decoration-color:#604779}
+.contact-box,.hero{background:#f0e8f7!important;color:#25202b!important}
+.contact-box p,.contact-box h2,.contact-box h3,.hero p,.hero h1,.hero .eyebrow{color:#25202b!important}
+.contact-box a{color:#604779!important;text-decoration:underline!important}
+.button,.button.secondary,.lab-button,.lab-button.secondary,.lesson-actions a,.lesson-actions a.secondary,.practice-link{background:#e9dcf5!important;color:#39264e!important;border:1px solid #b9a2ce!important}
+.button:hover,.lab-button:hover,.lesson-actions a:hover,.practice-link:hover{background:#dcc9ef!important}
+.lesson-card pre,.code-panel,pre,.lab-editor,textarea.lab-editor{background:#f4eef9!important;color:#25202b!important;border:1px solid #cbb9db!important}
+pre code,.code-panel code,.lab-editor::placeholder{color:#3d3150!important}
+.lab-editor{caret-color:#25202b!important}
+button:disabled,.lab-button:disabled{color:#39264e!important}
