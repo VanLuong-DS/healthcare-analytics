@@ -20,3 +20,27 @@ a:not(.button):not(.lab-button):not(.practice-link):not(.pill){color:#604779;tex
 pre code,.code-panel code,.lab-editor::placeholder{color:#3d3150!important}
 .lab-editor{caret-color:#25202b!important}
 button:disabled,.lab-button:disabled{color:#39264e!important}
+
+/* Final contrast rules: preserve lavender styling, make all text readable. */
+.contact-box, .contact-box *, .feature-band, .feature-band *,
+.hero, .hero *, footer, footer *, .card, .card * {
+  color: #25202b !important;
+}
+.contact-box a, .feature-band a, .hero a, footer a, .card a,
+.lesson-wrap a, .nav-lesson a {
+  color: #604779 !important;
+  text-decoration: underline;
+}
+.button, .button.secondary, .lab-button, .lab-button.secondary,
+.lesson-actions a, .lesson-actions a.secondary, .practice-link {
+  color: #39264e !important;
+  background: #e9dcf5 !important;
+  border: 1px solid #b9a2ce !important;
+  text-decoration: underline;
+}
+input, select, textarea, .lab-select, .lab-input, .lab-editor,
+pre, pre *, .code-panel, .code-panel * {
+  color: #25202b !important;
+}
+input, select, textarea { background-color: #fff; }
+.lab-editor, pre, .code-panel { background-color: #f4eef9 !important; }
